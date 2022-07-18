@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -109,21 +108,6 @@
                     <view key="view" contentMode="scaleToFill" id="t7L-8l-8kj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Map" translatesAutoresizingMaskIntoConstraints="NO" id="U5d-ml-QeP">
-                                <rect key="frame" x="16" y="56" width="343" height="673"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-2e-4To">
-                                <rect key="frame" x="233" y="600" width="112" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="mappin.and.ellipse" catalog="system" title="Click for Live Map"/>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bnZ-Zh-HFe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -131,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2X-d9-G0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="88.669950738916256"/>
+            <point key="canvasLocation" x="548" y="89"/>
         </scene>
         <!--Social Clubs-->
         <scene sceneID="JpZ-1h-487">
@@ -184,18 +168,81 @@
         <!--Posts-->
         <scene sceneID="Me3-i5-T81">
             <objects>
-                <viewController id="Chn-ca-AiR" sceneMemberID="viewController">
+                <viewController id="Chn-ca-AiR" customClass="ViewController" customModule="StudentPortal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Zd-dc-I7a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y0y-PS-0f3">
+                                <rect key="frame" x="0.0" y="56" width="375" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="postsCell" rowHeight="191" id="7dQ-SN-Q9b" customClass="PostsTableViewCell" customModule="StudentPortal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="191"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7dQ-SN-Q9b" id="Twx-J1-GwW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="191"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibv-jX-Jak">
+                                                    <rect key="frame" x="16" y="11" width="343" height="117"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5B-xv-0kc">
+                                                    <rect key="frame" x="16" y="159" width="153" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8m-z4-f4q">
+                                                    <rect key="frame" x="206" y="131" width="153" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Read more">
+                                                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S8m-z4-f4q" firstAttribute="top" secondItem="Twx-J1-GwW" secondAttribute="topMargin" constant="120" id="1VM-Fm-4pG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ibv-jX-Jak" secondAttribute="bottom" constant="52" id="GLO-LM-h4F"/>
+                                                <constraint firstItem="Ibv-jX-Jak" firstAttribute="leading" secondItem="Twx-J1-GwW" secondAttribute="leadingMargin" id="Gtd-GE-NSx"/>
+                                                <constraint firstItem="l5B-xv-0kc" firstAttribute="leading" secondItem="Twx-J1-GwW" secondAttribute="leadingMargin" id="Iiv-WW-Y9p"/>
+                                                <constraint firstItem="Ibv-jX-Jak" firstAttribute="trailing" secondItem="Twx-J1-GwW" secondAttribute="trailingMargin" id="Md3-cH-RU0"/>
+                                                <constraint firstItem="S8m-z4-f4q" firstAttribute="leading" secondItem="Twx-J1-GwW" secondAttribute="leadingMargin" constant="190" id="SDJ-9b-gOE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="l5B-xv-0kc" secondAttribute="trailing" constant="190" id="XIe-yM-N1i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="S8m-z4-f4q" secondAttribute="trailing" id="pl6-eG-0l5"/>
+                                                <constraint firstItem="l5B-xv-0kc" firstAttribute="bottom" secondItem="Twx-J1-GwW" secondAttribute="bottomMargin" id="tm0-X9-gOw"/>
+                                                <constraint firstItem="Ibv-jX-Jak" firstAttribute="top" secondItem="Twx-J1-GwW" secondAttribute="topMargin" id="wHs-45-bD1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="l5B-xv-0kc" id="B8y-41-lam"/>
+                                            <outlet property="readButton" destination="S8m-z4-f4q" id="U9I-18-QID"/>
+                                            <outlet property="summaryLabel" destination="Ibv-jX-Jak" id="csu-qv-xwt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5tv-eC-xlh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5tv-eC-xlh" firstAttribute="trailing" secondItem="Y0y-PS-0f3" secondAttribute="trailing" id="68q-LP-TO7"/>
+                            <constraint firstItem="Y0y-PS-0f3" firstAttribute="leading" secondItem="5tv-eC-xlh" secondAttribute="leading" id="BW6-jI-W5j"/>
+                            <constraint firstItem="Y0y-PS-0f3" firstAttribute="top" secondItem="5tv-eC-xlh" secondAttribute="top" id="N0n-0d-kyJ"/>
+                            <constraint firstItem="5tv-eC-xlh" firstAttribute="bottom" secondItem="Y0y-PS-0f3" secondAttribute="bottom" id="zbR-Ze-gBS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Posts" id="bml-1h-nCG"/>
+                    <connections>
+                        <outlet property="postsTable" destination="Y0y-PS-0f3" id="KRO-01-QpI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aT-rZ-tkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="-763"/>
+            <point key="canvasLocation" x="493.60000000000002" y="-763.30049261083752"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Dx8-oh-hhJ">
@@ -366,16 +413,11 @@
     </scenes>
     <resources>
         <image name="185896287_l" width="1200" height="1200"/>
-        <image name="Map" width="1166" height="2436"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="map" catalog="system" width="128" height="110"/>
-        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
